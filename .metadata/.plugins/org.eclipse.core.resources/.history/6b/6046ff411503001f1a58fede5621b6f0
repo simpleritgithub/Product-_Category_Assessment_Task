@@ -1,0 +1,14 @@
+package com.demo.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.demo.Model.Category;
+
+@Repository
+@RequestMapping("/category")
+public interface CategoryDao extends JpaRepository<Category, Integer> {
+
+}
+ 

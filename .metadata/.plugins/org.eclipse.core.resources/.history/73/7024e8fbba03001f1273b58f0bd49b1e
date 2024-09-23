@@ -1,0 +1,10 @@
+package com.demo.pagination;
+
+import java.util.List;
+
+public class PaginationUtility {
+	 public static <T> List<T> paginateList(List<T> list, int pageNumber, int pageSize) {
+	        int startFrom = (pageNumber - 1) * pageSize;
+	        int end = Math.min(startFrom + pageSize, list.size());
+	        return list.subList(startFrom, end);
+}

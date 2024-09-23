@@ -1,0 +1,48 @@
+package com.demo.service;
+
+
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.Model.Category;
+
+@Service
+public class CategoryServiceImpl implements CategoryService {
+	
+	private CategoryService cs;
+
+	@Override
+	public Category create(Category category) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category update(Category category) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int categoryId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Category getById(int Category) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Category> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

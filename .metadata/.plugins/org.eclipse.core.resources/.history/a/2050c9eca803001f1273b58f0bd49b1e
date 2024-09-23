@@ -1,0 +1,46 @@
+package com.demo.payload;
+
+import java.util.List;
+
+import com.demo.Model.Product;
+
+public class ProductResponse {
+	
+	private List<Product> content;
+	private int pageNumber;
+	private int pagesize;
+	private int totalpages;
+	private int lastPage;
+	
+	public List<Product> getContent() {
+		return content;
+	}
+	public void setContent(List<Product> content) {
+		this.content = content;
+	}
+	public int getPageNumber() {
+		return pageNumber;
+	}
+	public void setPageNumber(int pageNumber) {
+		this.pageNumber = pageNumber;
+	}
+	public int getPagesize() {
+		return pagesize;
+	}
+	public void setPagesize(int pagesize) {
+		this.pagesize = pagesize;
+	}
+	public int getTotalpages() {
+		return totalpages;
+	}
+	public void setTotalpages(int totalpages) {
+		this.totalpages = totalpages;
+	}
+	public int getLastPage() {
+		return lastPage;
+	}
+	public void setLastPage(int lastPage) {
+		this.lastPage = lastPage;
+	}
+
+}

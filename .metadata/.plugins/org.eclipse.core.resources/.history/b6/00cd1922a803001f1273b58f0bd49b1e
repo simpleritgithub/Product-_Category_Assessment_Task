@@ -1,0 +1,5 @@
+package com.demo.payload;
+
+public class ProductResponse {
+
+}

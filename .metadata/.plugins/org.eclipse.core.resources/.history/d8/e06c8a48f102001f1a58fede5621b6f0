@@ -1,0 +1,80 @@
+package com.demo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.Model.Product;
+import com.demo.dao.ProductDao;
+
+@Service
+public class ProductServicveImpl implements ProductService {
+	
+	@Autowired
+	private ProductDao pd;
+	
+	
+	public Product addProduct(Product product,int catId)
+	{
+	return pd.save(product);
+	}
+	
+	
+	public List<Product>ViewAllProduct()
+	{
+	List<Product>viewAll = 	pd.findAll();
+	return viewAll;
+		
+		
+	}
+
+
+	@Override
+	public Product findProductById(int productId) {
+		 return pd.findById(productId);
+	}
+
+
+	@Override
+	public boolean deleteProduct(int productId) {
+	    try {
+	        pd.deleteById(productId);
+	        return true;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
+
+
+
+
+	@Override
+	public Product updateProduct(int pid, Product newp) {
+	    Product existingProduct = pd.findById(pid);
+	    if (existingProduct != null) {
+	        existingProduct.setProductName(newp.getProductName());
+	        existingProduct.setProductPrice(newp.getProductPrice());
+	        existingProduct.setStock(newp.getStock());
+	        existingProduct.setProductDesc(newp.getProductDesc());
+	        
+	        return pd.save(existingProduct);
+	    } else {
+	        
+	        return null;
+	    }
+	}
+
+	}
+
+
+
+	
+
+
+	
+	
+	
+

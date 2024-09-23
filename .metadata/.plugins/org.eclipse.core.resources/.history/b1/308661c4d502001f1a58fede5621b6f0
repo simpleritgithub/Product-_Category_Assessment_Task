@@ -1,0 +1,43 @@
+package com.demo.Model;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+@Entity
+public class Category {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int CategoryId;
+	private String title;
+	
+	public Product getProduct() {
+		return product;
+	}
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	private Product product;
+	@Override
+	public String toString() {
+		return "Category [CategoryId=" + CategoryId + ", title=" + title + ", product=" + product + "]";
+	}
+	public int getCategoryId() {
+		return CategoryId;
+	}
+	public void setCategoryId(int categoryId) {
+		CategoryId = categoryId;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+}

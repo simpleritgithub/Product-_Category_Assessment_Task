@@ -1,0 +1,18 @@
+package com.demo.service;
+
+import com.demo.Model.Category;
+
+public interface CategoryService {
+	
+	public Category create(Category category);
+	public Category update(Category category);
+	public void delete(int categoryId);
+	public Category getById(int Category);
+	
+	
+	
+	
+	
+	
+	
+}

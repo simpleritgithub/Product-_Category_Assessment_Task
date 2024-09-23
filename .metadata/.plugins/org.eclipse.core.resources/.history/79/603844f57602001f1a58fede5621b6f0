@@ -1,0 +1,58 @@
+package com.demo.Model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Product")
+public class Product {
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int productId;
+	private String Product_Name;
+	private Double Product_Price;
+	private Boolean Stock;
+	private String product_desc;
+	
+	
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", Product_Name=" + Product_Name + ", Product_Price=" + Product_Price
+				+ ", Stock=" + Stock + ", product_desc=" + product_desc + "]";
+	}
+	public int getProductId() {
+		return productId;
+	}
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+	public String getProduct_Name() {
+		return Product_Name;
+	}
+	public void setProduct_Name(String product_Name) {
+		Product_Name = product_Name;
+	}
+	public Double getProduct_Price() {
+		return Product_Price;
+	}
+	public void setProduct_Price(Double product_Price) {
+		Product_Price = product_Price;
+	}
+	public Boolean getStock() {
+		return Stock;
+	}
+	public void setStock(Boolean stock) {
+		Stock = stock;
+	}
+	public String getProduct_desc() {
+		return product_desc;
+	}
+	public void setProduct_desc(String product_desc) {
+		this.product_desc = product_desc;
+	}
+	
+	
+}

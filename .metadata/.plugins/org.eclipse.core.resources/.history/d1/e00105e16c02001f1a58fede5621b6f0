@@ -1,0 +1,12 @@
+package com.demo.Model;
+
+public class Product {
+		
+	private int productId;
+	private String Product_Name;
+	private Double Product_Price;
+	private Boolean Stock;
+	private String product_desc;
+	
+	
+}
